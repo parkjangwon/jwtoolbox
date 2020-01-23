@@ -13,7 +13,7 @@ public class TryResourceEx {
         System.out.write(i);
       }
     } catch (IOException ie) {
-      System.out.println(ie.toString());
+        ie.printStackTrace();
     }
 
   }

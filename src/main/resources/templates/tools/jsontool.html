@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JW's ToolBox</title>
+</head>
+<body>
+<h1>JSON Formatter</h1> <h5>Enter json text and click on the "GO!" button or enter "Shift + Enter Key".</h5>
+
+<table id="jsonformatter">
+	<tr>
+		<td>
+			Input JSON String
+		</td>
+		<td>
+			<textarea style="resize: none;" cols="100" rows="10" id="jsonformatter_inputStr"></textarea>
+		</td>
+		<td>
+			<button id="jsonformatterBtn">GO!</button>
+		</td>
+		<td>
+			<button id="jsonformatter_init_btn">Init</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Formatted JSON Object
+		</td>
+		<td>
+			<textarea style="resize: none;" cols="100" rows="30" id="jsonformatter_outputStr" disabled="true"></textarea>
+		</td>
+	</tr>
+
+</table>
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+<!-- <script /> : 이런식으로 작성하면 스크립트 호출 안됨.. 주의 -->
+<script th:src="@{/js/tools/jsontool/formatter.js}"></script>
+</body>
+</html>

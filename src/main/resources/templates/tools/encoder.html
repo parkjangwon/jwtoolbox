@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JW's ToolBox</title>
+</head>
+<body>
+	<h1>Web Encoder</h1> <h5>Enter text and click on the "GO!" button or enter "Shift + Enter Key".</h5>
+
+	<table id="base64">
+		<tr>
+			<td>
+				Base64 Encoder
+			</td>
+			<td>
+				<input type="text" id="base64_encode_inputStr" placeholder="input String">
+			</td>
+			<td>
+				<input type="text" id="base64_encode_outputStr" disabled="true">
+			</td>
+			<td>
+				<button id="base64_encodeBtn">GO!</button>
+			</td>
+			<td>
+				<button id="base64_encode_input_init_btn">Init</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				Base64 Decoder
+			</td>
+			<td>
+				<input type="text" id="base64_decode_inputStr" placeholder="input String">
+			</td>
+			<td>
+				<input type="text" id="base64_decode_outputStr" disabled="true">
+			</td>
+			<td>
+				<button id="base64_decodeBtn">GO!</button>
+			</td>
+			<td>
+				<button id="base64_decode_input_init_btn">Init</button>
+			</td>
+		</tr>
+
+
+	</table>
+
+	<script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+	<!-- <script /> : 이런식으로 작성하면 스크립트 호출 안됨.. 주의 -->
+	<script th:src="@{/js/tools/encoder/encoder.js}"></script>
+</body>
+</html>

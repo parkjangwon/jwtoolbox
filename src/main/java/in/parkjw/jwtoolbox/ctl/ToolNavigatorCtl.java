@@ -15,4 +15,9 @@ public class ToolNavigatorCtl {
 	public String formatter(){
 		return "tools/formatter";
 	}
+
+	@GetMapping("tools/iplookup")
+	public String iplookup(){
+		return "tools/iplookup";
+	}
 }

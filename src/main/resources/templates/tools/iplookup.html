@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JW's ToolBox</title>
+</head>
+<body>
+<h1>IP Address LookUp</h1> <h5>Enter "IP Address" or "Domain" and click on the "GO!" button or enter "Shift + Enter Key".</h5>
+
+<table id="iplookup">
+	<tr>
+		<td>
+			Input IP Address
+		</td>
+		<td>
+			<input type="text" id="iplookup_inputStr"/>
+			<button id="iplookupBtn">GO!</button>
+			<button id="iplookup_init_btn">Init</button>
+		</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>
+			LookUp Result
+		</td>
+		<td>
+			<textarea style="resize: none;" cols="100" rows="30" id="iplookup_outputStr" disabled="true"></textarea>
+		</td>
+	</tr>
+
+</table>
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+<!-- <script /> : 이런식으로 작성하면 스크립트 호출 안됨.. 주의 -->
+<script th:src="@{/js/tools/ip/lookup.js}"></script>
+</body>
+</html>

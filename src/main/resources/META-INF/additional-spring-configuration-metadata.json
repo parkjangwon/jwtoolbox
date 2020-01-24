@@ -1,0 +1,8 @@
+{
+  "properties": [
+    {
+      "name": "maxmind.geoip.geolite2-country-mmdb",
+      "type": "java.lang.String",
+      "description": "Description for maxmind.geoip.geolite2-country-mmdb."
+  }
+] }

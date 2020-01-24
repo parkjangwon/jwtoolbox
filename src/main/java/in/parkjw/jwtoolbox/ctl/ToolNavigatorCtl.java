@@ -11,8 +11,8 @@ public class ToolNavigatorCtl {
 		return "tools/encoder";
 	}
 
-	@GetMapping("tools/jsontool")
-	public String jsontool(){
-		return "tools/jsontool";
+	@GetMapping("tools/formatter")
+	public String formatter(){
+		return "tools/formatter";
 	}
 }

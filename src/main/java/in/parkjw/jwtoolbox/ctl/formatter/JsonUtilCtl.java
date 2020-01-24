@@ -1,6 +1,6 @@
-package in.parkjw.jwtoolbox.ctl.json;
+package in.parkjw.jwtoolbox.ctl.formatter;
 
-import in.parkjw.jwtoolbox.service.json.JsonUtil;
+import in.parkjw.jwtoolbox.service.formatter.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -16,7 +16,7 @@ public class JsonUtilCtl {
 	@Autowired
 	private JsonUtil jsonUtil;
 
-	@PostMapping("/json/jsonformatter.json")
+	@PostMapping("/formatter/jsonformatter.json")
 	@ResponseBody
 	public Map<String, Object> formatter(@RequestParam(required = false, value = "str") String str) {
 		Map<String, Object> resultMap = new HashMap<>();

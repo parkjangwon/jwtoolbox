@@ -6,7 +6,7 @@ $(document).ready(function(){
 		var str = $("#jsonformatter_inputStr").val();
 
 		$.ajax({
-			url : "/json/jsonformatter.json",
+			url : "/formatter/jsonformatter.json",
 			type : "POST",
 			cache : false,
 			dataType : "json",

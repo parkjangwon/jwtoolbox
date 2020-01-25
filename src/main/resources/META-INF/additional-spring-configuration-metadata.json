@@ -4,5 +4,10 @@
       "name": "maxmind.geoip.geolite2-country-mmdb",
       "type": "java.lang.String",
       "description": "Description for maxmind.geoip.geolite2-country-mmdb."
+  },
+  {
+    "name": "maxmind.geoip.geolite2-city-mmdb",
+    "type": "java.lang.String",
+    "description": "Description for maxmind.geoip.geolite2-city-mmdb."
   }
 ] }

@@ -43,4 +43,29 @@ public class JsonUtilImpl implements JsonUtil {
 		}
 		return resultStr;
 	}
+	@Override
+	public String formatter(Map<String, Object> map) {
+
+		ObjectMapper mapper = new ObjectMapper();
+		mapper.configure(JsonParser.Feature.ALLOW_UNQUOTED_FIELD_NAMES, true);
+
+		/**
+		 * Test Json String (compact)
+		 * {"name":"pjw","gender":"man","age":"29","email":"vim@kakao.com"}
+		 * {name:"pjw",gender:"man",age:"29",email:"vim@kakao.com"}
+		 */
+		String resultStr;
+
+		if (map.size() > 0) {
+			try {
+				resultStr = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(map);
+			} catch (JsonProcessingException e) {
+				resultStr = "ERROR! check Input Data.";
+				e.printStackTrace();
+			}
+		} else {
+			resultStr = "NO DATA!";
+		}
+		return resultStr;
+	}
 }

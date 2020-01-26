@@ -87,26 +87,26 @@ public class GeoIPService {
 		Map<String, Object> resultMap = new HashMap<>();
 		CityResponse cityResponse = cityResponse(ipAddress);
 		if(cityResponse != null) {
-			Map<String, Object> infoMap = new HashMap<>();
 			Country country = cityResponse.getCountry();
-			infoMap.put("result", true);
-			infoMap.put("countryIsoCode", country.getIsoCode());            // 'US'
-			infoMap.put("countrYName", country.getName());               // 'United States'
+			resultMap.put("result", true);
+			resultMap.put("countryIsoCode", country.getIsoCode());            // 'US'
+			resultMap.put("countryName", country.getName());               // 'United States'
 
 			Subdivision subdivision = cityResponse.getMostSpecificSubdivision();
-			infoMap.put("subdivisionIsocode", subdivision.getIsoCode()); // 'MN'
-			infoMap.put("subdivisionName", subdivision.getName());    // 'Minnesota'
-
-			City city = cityResponse.getCity();
-			infoMap.put("cityName", city.getName()); // 'Minneapolis'
-
-			Postal postal = cityResponse.getPostal();
-			infoMap.put("postalCode", postal.getCode()); // '55455'
+			resultMap.put("subdivisionIsocode", subdivision.getIsoCode()); // 'MN'
+			resultMap.put("subdivisionName", subdivision.getName());    // 'Minnesota'
 
 			Location location = cityResponse.getLocation();
-			infoMap.put("latitude", location.getLatitude());  // 44.9733
-			infoMap.put("longitude", location.getLongitude()); // -93.2323
-			return infoMap;
+			resultMap.put("latitude", location.getLatitude());  // 44.9733
+			resultMap.put("longitude", location.getLongitude()); // -93.2323
+
+			City city = cityResponse.getCity();
+			resultMap.put("cityName", city.getName()); // 'Minneapolis'
+
+			Postal postal = cityResponse.getPostal();
+			resultMap.put("postalCode", postal.getCode()); // '55455'
+
+			return resultMap;
 
 		} else {
 			resultMap.put("result", false);

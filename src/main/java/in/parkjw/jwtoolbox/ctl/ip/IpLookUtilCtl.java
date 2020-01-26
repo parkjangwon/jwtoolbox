@@ -32,6 +32,8 @@ public class IpLookUtilCtl {
 			tmpMap = service.countryInfomation(ip);
 			country = jsonUtil.formatter(tmpMap);
 			resultMap.put("str", country);
+			resultMap.put("latitude", tmpMap.get("latitude"));
+			resultMap.put("longitude", tmpMap.get("longitude"));
 			resultMap.put("result", true);
 		} catch (Exception e) {
 			e.printStackTrace();

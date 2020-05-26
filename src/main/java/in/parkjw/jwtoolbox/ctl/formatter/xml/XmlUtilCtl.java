@@ -1,34 +1,31 @@
-package in.parkjw.jwtoolbox.ctl.formatter;
+package in.parkjw.jwtoolbox.ctl.formatter.xml;
 
-import in.parkjw.jwtoolbox.service.formatter.JsonUtil;
+import in.parkjw.jwtoolbox.service.formatter.xml.XmlUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-public class JsonUtilCtl {
+public class XmlUtilCtl {
 
 	@Autowired
-	private JsonUtil jsonUtil;
+	private XmlUtil xmlUtil;
 
-	@PostMapping("/formatter/jsonformatter.json")
-	@ResponseBody
-	public Map<String, Object> formatter(@RequestParam(required = false, value = "str") String str) {
+	@PostMapping("/formatter/xml.json")
+	public Map<String, Object> formatter(@RequestParam(required = false, value = "indent") String indent, @RequestParam(required = false, value = "str") String str) {
 		Map<String, Object> resultMap = new HashMap<>();
 		resultMap.put("result", false);
-		String jsonFormattedStr = "";
+		String xmlFormattedStr = "";
 
 		try {
-			jsonFormattedStr = jsonUtil.formatter(str);
-			resultMap.put("str", jsonFormattedStr);
+			xmlFormattedStr = xmlUtil.formatter(str, indent);
+			resultMap.put("str", xmlFormattedStr);
 			resultMap.put("result", true);
 		} catch (Exception e) {
-			e.printStackTrace();
 			resultMap.put("str", "ERROR!");
 		}
 

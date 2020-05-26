@@ -1,4 +1,4 @@
-package in.parkjw.jwtoolbox.service.formatter;
+package in.parkjw.jwtoolbox.service.formatter.json;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;

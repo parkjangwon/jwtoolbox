@@ -1,6 +1,6 @@
 package in.parkjw.jwtoolbox.ctl.ip;
 
-import in.parkjw.jwtoolbox.service.formatter.JsonUtil;
+import in.parkjw.jwtoolbox.service.formatter.json.JsonUtil;
 import in.parkjw.jwtoolbox.service.ip.lookup.GeoIPService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

@@ -1,12 +1,12 @@
 $(document).ready(function(){
-	console.log("jsonFormatter");
+	console.log("json");
 
 	function formatting() {
 		var params = [];
-		var str = $("#jsonformatter_inputStr").val();
+		var str = $("#json_inputStr").val();
 
 		$.ajax({
-			url : "/formatter/jsonformatter.json",
+			url : "/formatter/json.json",
 			type : "POST",
 			cache : false,
 			dataType : "json",
@@ -14,7 +14,7 @@ $(document).ready(function(){
 			success : function(data){
 
 				if (data.result == true) {
-					$("#jsonformatter_outputStr").val(data.str);
+					$("#json_outputStr").val(data.str);
 				} else {
 					alert("에러가 발생되었습니다.\n입력값을 확인해 주세요");
 				}
@@ -28,12 +28,12 @@ $(document).ready(function(){
 	}
 
 	/********************* Pretty Json Object String (BUTTON) *********************/
-	$("#jsonformatterBtn").click(function(){
+	$("#jsonBtn").click(function(){
 		formatting();
 	});
 
 	/********************* Pretty Json Object String (ENTER KEY) *********************/
-	$("#jsonformatter_inputStr").on("keypress",function(e) {
+	$("#json_inputStr").on("keypress",function(e) {
 		var key = e.keyCode;
 
 		// If the user has pressed enter
@@ -44,10 +44,10 @@ $(document).ready(function(){
 		}
 	});
 
-	/********************* jsonformatter textarea values init *********************/
-	$("#jsonformatter_init_btn").click(function(){
-		$("#jsonformatter_inputStr").val('');
-		$("#jsonformatter_outputStr").val('');
+	/********************* json textarea values init *********************/
+	$("#json_init_btn").click(function(){
+		$("#json_inputStr").val('');
+		$("#json_outputStr").val('');
 	});
 
 });

@@ -11,9 +11,14 @@ public class ToolNavigatorCtl {
 		return "tools/encoder";
 	}
 
-	@GetMapping("tools/formatter")
-	public String formatter(){
-		return "tools/formatter";
+	@GetMapping("tools/formatter/json")
+	public String jsonFormatter(){
+		return "tools/formatter/json";
+	}
+
+	@GetMapping("tools/formatter/xml")
+	public String xmlFormatter(){
+		return "tools/formatter/xml";
 	}
 
 	@GetMapping("tools/iplookup")

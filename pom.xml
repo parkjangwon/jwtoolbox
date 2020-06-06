@@ -96,6 +96,14 @@
             <version>2.13.0</version>
         </dependency>
 
+        <!-- SQL Formatter -->
+        <!-- https://mvnrepository.com/artifact/com.github.vertical-blank/sql-formatter -->
+        <dependency>
+            <groupId>com.github.vertical-blank</groupId>
+            <artifactId>sql-formatter</artifactId>
+            <version>1.0</version>
+        </dependency>
+
     </dependencies>
 
     <build>

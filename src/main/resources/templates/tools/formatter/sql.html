@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JW's ToolBox</title>
+</head>
+<body>
+<h1>SQL Formatter</h1> <h5>Enter sql text and click on the "GO!" button or enter "Shift + Enter Key".</h5>
+
+<table id="json">
+	<tr>
+		<td>
+			Input SQL String
+		</td>
+		<td>
+			<textarea style="resize: none;" cols="100" rows="10" id="sql_inputStr"></textarea>
+		</td>
+<!--		<td>-->
+<!--			<b>들여쓰기</b> <select name='sql_indent'>-->
+<!--				<option value='tab'>TAB</option>-->
+<!--				<option value='0'>0</option>-->
+<!--				<option value='1'>1</option>-->
+<!--				<option value='2'>2</option>-->
+<!--				<option value='4'>4</option>-->
+<!--			</select>-->
+<!--		</td>-->
+		<td>
+			<button id="sqlBtn">GO!</button>
+		</td>
+		<td>
+			<button id="sql_init_btn">Init</button>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			Pretty SQL :)
+		</td>
+		<td>
+			<textarea style="resize: none;" cols="100" rows="30" id="sql_outputStr" disabled="true"></textarea>
+		</td>
+	</tr>
+
+</table>
+
+<script th:src="@{/webjars/jquery/3.4.1/jquery.min.js}"></script>
+<!-- <script /> : 이런식으로 작성하면 스크립트 호출 안됨.. 주의 -->
+<script th:src="@{/js/tools/formatter/sql.js}"></script>
+</body>
+</html>

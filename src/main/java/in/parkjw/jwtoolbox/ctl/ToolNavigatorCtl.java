@@ -8,7 +8,7 @@ public class ToolNavigatorCtl {
 
 	@GetMapping("tools/encoder")
 	public String encoder(){
-		return "tools/encoder";
+		return "tools/encoder/encoder";
 	}
 
 	@GetMapping("tools/formatter/json")
@@ -19,6 +19,11 @@ public class ToolNavigatorCtl {
 	@GetMapping("tools/formatter/xml")
 	public String xmlFormatter(){
 		return "tools/formatter/xml";
+	}
+
+	@GetMapping("tools/formatter/sql")
+	public String sqlFormatter(){
+		return "tools/formatter/sql";
 	}
 
 	@GetMapping("tools/iplookup")
